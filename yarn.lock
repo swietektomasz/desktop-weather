@@ -1106,6 +1106,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"abstract-level@npm:^2.0.0, abstract-level@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "abstract-level@npm:2.0.2"
+  dependencies:
+    buffer: "npm:^6.0.3"
+    is-buffer: "npm:^2.0.5"
+    level-supports: "npm:^6.0.0"
+    level-transcoder: "npm:^1.0.1"
+    maybe-combine-errors: "npm:^1.0.0"
+    module-error: "npm:^1.0.1"
+  checksum: 10c0/8dfaf79d5fdbe87b398fcdc8894ea96b8807e124718332dfca693d864c4bd5e046c14f3e22232a9b58117b1dbf923cc64b06a1b9aca7cbc91cb3d41798096fcd
+  languageName: node
+  linkType: hard
+
 "accepts@npm:~1.3.8":
   version: 1.3.8
   resolution: "accepts@npm:1.3.8"
@@ -1167,6 +1181,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base64-js@npm:^1.3.1":
+  version: 1.5.1
+  resolution: "base64-js@npm:1.5.1"
+  checksum: 10c0/f23823513b63173a001030fae4f2dabe283b99a9d324ade3ad3d148e218134676f1ee8568c877cd79ec1c53158dcf2d2ba527a97c606618928ba99dd930102bf
+  languageName: node
+  linkType: hard
+
 "body-parser@npm:1.20.3":
   version: 1.20.3
   resolution: "body-parser@npm:1.20.3"
@@ -1196,6 +1217,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"browser-level@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "browser-level@npm:2.0.0"
+  dependencies:
+    abstract-level: "npm:^2.0.1"
+  checksum: 10c0/33fc33e39441e37d1851e8a99de981f2c39488e838104748a4c02c598b877ab929a2d55077376e57289e512357f8eb703819eafb3d13aafb9232a97153c67305
+  languageName: node
+  linkType: hard
+
 "browserslist@npm:^4.24.0":
   version: 4.24.4
   resolution: "browserslist@npm:4.24.4"
@@ -1207,6 +1237,16 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 10c0/db7ebc1733cf471e0b490b4f47e3e2ea2947ce417192c9246644e92c667dd56a71406cc58f62ca7587caf828364892e9952904a02b7aead752bc65b62a37cfe9
+  languageName: node
+  linkType: hard
+
+"buffer@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "buffer@npm:6.0.3"
+  dependencies:
+    base64-js: "npm:^1.3.1"
+    ieee754: "npm:^1.2.1"
+  checksum: 10c0/2a905fbbcde73cc5d8bd18d1caa23715d5f83a5935867c2329f0ac06104204ba7947be098fe1317fbd8830e26090ff8e764f08cd14fefc977bb248c3487bcbd0
   languageName: node
   linkType: hard
 
@@ -1268,6 +1308,19 @@ __metadata:
   version: 3.0.0
   resolution: "chownr@npm:3.0.0"
   checksum: 10c0/43925b87700f7e3893296c8e9c56cc58f926411cce3a6e5898136daaf08f08b9a8eb76d37d3267e707d0dcc17aed2e2ebdf5848c0c3ce95cf910a919935c1b10
+  languageName: node
+  linkType: hard
+
+"classic-level@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "classic-level@npm:2.0.0"
+  dependencies:
+    abstract-level: "npm:^2.0.0"
+    module-error: "npm:^1.0.1"
+    napi-macros: "npm:^2.2.2"
+    node-gyp: "npm:latest"
+    node-gyp-build: "npm:^4.3.0"
+  checksum: 10c0/3d06f8932cba410906db0cfe37a13a3792c0e8395d63b37c2c69bed9b31d74f6e7f4d71defb691ef71b52b56033ab921f2067c9b390cecdae93f016fa8f8178c
   languageName: node
   linkType: hard
 
@@ -1382,6 +1435,7 @@ __metadata:
     "@types/react-dom": "npm:^18.3.1"
     "@vitejs/plugin-react": "npm:^4.3.4"
     express: "npm:^4.21.2"
+    level: "npm:^9.0.0"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     tsx: "npm:^4.19.2"
@@ -1968,6 +2022,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ieee754@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "ieee754@npm:1.2.1"
+  checksum: 10c0/b0782ef5e0935b9f12883a2e2aa37baa75da6e66ce6515c168697b42160807d9330de9a32ec1ed73149aea02e0d822e572bca6f1e22bdcbd2149e13b050b17bb
+  languageName: node
+  linkType: hard
+
 "imurmurhash@npm:^0.1.4":
   version: 0.1.4
   resolution: "imurmurhash@npm:0.1.4"
@@ -1996,6 +2057,13 @@ __metadata:
   version: 1.9.1
   resolution: "ipaddr.js@npm:1.9.1"
   checksum: 10c0/0486e775047971d3fdb5fb4f063829bac45af299ae0b82dcf3afa2145338e08290563a2a70f34b732d795ecc8311902e541a8530eeb30d75860a78ff4e94ce2a
+  languageName: node
+  linkType: hard
+
+"is-buffer@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "is-buffer@npm:2.0.5"
+  checksum: 10c0/e603f6fced83cf94c53399cff3bda1a9f08e391b872b64a73793b0928be3e5f047f2bcece230edb7632eaea2acdbfcb56c23b33d8a20c820023b230f1485679a
   languageName: node
   linkType: hard
 
@@ -2065,6 +2133,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"level-supports@npm:^6.0.0":
+  version: 6.2.0
+  resolution: "level-supports@npm:6.2.0"
+  checksum: 10c0/764d23a037a44b4a8989cf6ebc590ce129e411dba852ccedfe09da1db3bc3dc330d3c43529d0c61748d90597b2e55381811ee2c49b216f2226e7c4789de4b6dc
+  languageName: node
+  linkType: hard
+
+"level-transcoder@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "level-transcoder@npm:1.0.1"
+  dependencies:
+    buffer: "npm:^6.0.3"
+    module-error: "npm:^1.0.1"
+  checksum: 10c0/25936330676325f22c5143aff5c7fe3f1db156db99f9efb07a2642045c2c6ee565fcbfccbadc0600b3abf8bbe595632cacc3dd334009214069d1857daa57987e
+  languageName: node
+  linkType: hard
+
+"level@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "level@npm:9.0.0"
+  dependencies:
+    abstract-level: "npm:^2.0.1"
+    browser-level: "npm:^2.0.0"
+    classic-level: "npm:^2.0.0"
+  checksum: 10c0/81f7d7daa8c7a3380f9438743e46807f67fd03cd18be55a286e48813fc7a60ac3823f6c01d033b022da31c3755dbc6472ed71540474bb406ad9775557161485d
+  languageName: node
+  linkType: hard
+
 "loose-envify@npm:^1.1.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -2115,6 +2211,13 @@ __metadata:
   version: 1.1.0
   resolution: "math-intrinsics@npm:1.1.0"
   checksum: 10c0/7579ff94e899e2f76ab64491d76cf606274c874d8f2af4a442c016bd85688927fcfca157ba6bf74b08e9439dc010b248ce05b96cc7c126a354c3bae7fcb48b7f
+  languageName: node
+  linkType: hard
+
+"maybe-combine-errors@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "maybe-combine-errors@npm:1.0.0"
+  checksum: 10c0/6c9be3750ae912f5083346eab8fb4f688a3781a1254f9002040d54fd6aa18d6f5a3ad3089f1ca27986a0e5d8694449b2487c75920c9549736c617332df782bca
   languageName: node
   linkType: hard
 
@@ -2259,6 +2362,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"module-error@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "module-error@npm:1.0.2"
+  checksum: 10c0/584a43a1bb2720c6c6c771e257a308af4f042a17c17b1472a2c855130a1ad93ba516a82ae7ac2ce2d03062e521cc53c03ec0ce153795d895312d7747fb3bb99b
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -2282,6 +2392,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"napi-macros@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "napi-macros@npm:2.2.2"
+  checksum: 10c0/cc85daaf82a4f585d30561047cef0f3e702be769b5cf2ffadc6242bc5a1033f6b8269012e54178baf66f022bd18aa9ebb619f1b530cc19c1f9b96f9689affd50
+  languageName: node
+  linkType: hard
+
 "negotiator@npm:0.6.3":
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
@@ -2293,6 +2410,17 @@ __metadata:
   version: 1.0.0
   resolution: "negotiator@npm:1.0.0"
   checksum: 10c0/4c559dd52669ea48e1914f9d634227c561221dd54734070791f999c52ed0ff36e437b2e07d5c1f6e32909fc625fe46491c16e4a8f0572567d4dd15c3a4fda04b
+  languageName: node
+  linkType: hard
+
+"node-gyp-build@npm:^4.3.0":
+  version: 4.8.4
+  resolution: "node-gyp-build@npm:4.8.4"
+  bin:
+    node-gyp-build: bin.js
+    node-gyp-build-optional: optional.js
+    node-gyp-build-test: build-test.js
+  checksum: 10c0/444e189907ece2081fe60e75368784f7782cfddb554b60123743dfb89509df89f1f29c03bbfa16b3a3e0be3f48799a4783f487da6203245fa5bed239ba7407e1
   languageName: node
   linkType: hard
 
