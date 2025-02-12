@@ -1,9 +1,17 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import cors from "cors";
 import { locationDbOptions } from "./db/location";
 import { locationRouter } from "./routes/location";
+import { ServerStatus } from "./enums";
 
 export const app = express();
 const port = 3000;
+
+const corsOptions = {
+  origin: "http://localhost:1420",
+};
+
+app.use(cors(corsOptions));
 
 // should return a list of locations with their coordinates
 // i.e there can be multiple locations under one name, it should return them all and the user should
@@ -13,6 +21,12 @@ const port = 3000;
 app.use("/location", locationRouter);
 
 // get weather based on saved name, save weather into db
+
+app.get("/status", (req, res) => {
+  const locationDbStatus = locationDbOptions().status;
+
+  res.send({ server: ServerStatus.Online, locationDb: locationDbStatus });
+});
 
 app.listen(port, () => {
   console.log(`Weather app server listening on port ${port}`);

@@ -3,12 +3,12 @@ import { locationDbOptions } from "../db/location";
 
 export const locationRouter = Router();
 
-locationRouter.get("/locations", async (req, res) => {
+locationRouter.get("/:name", async (req, res) => {
   const searchParams = new URLSearchParams({
     count: "1",
     format: "json",
     language: "en",
-    name: req.body.name,
+    name: req.params.name,
   }).toString();
 
   const locations = await fetch(
@@ -23,7 +23,7 @@ locationRouter.get("/locations", async (req, res) => {
   // Save new locations to db, should probably check if they already exist, maybe have some semi-persistent storage
   const { saveLocationsByName } = locationDbOptions();
   // check where the coordinates actually are
-  saveLocationsByName(req.body.name, locations);
+  saveLocationsByName(req.params.name, locations);
 
   res.send(locations);
 });

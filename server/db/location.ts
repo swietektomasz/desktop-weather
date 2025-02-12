@@ -27,11 +27,14 @@ const loadLocationsByName = async (name: string) => {
   return JSON.parse(locations);
 };
 
+const status = locationDb.status;
+
 export const locationDbOptions = () => {
   return {
     loadLocationByName,
     saveLocationByName,
     loadLocationsByName,
     saveLocationsByName,
+    status,
   };
 };
