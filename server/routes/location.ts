@@ -4,8 +4,18 @@ import { locationDbOptions } from "../db/location";
 export const locationRouter = Router();
 
 locationRouter.get("/:name", async (req, res) => {
+  const { saveLocationsByName, loadLocationsByName } = locationDbOptions();
+  const savedLocations = await loadLocationsByName(req.params.name);
+
+  console.log(savedLocations);
+
+  if (savedLocations.length > 0) {
+    res.send(savedLocations);
+    return;
+  }
+
   const searchParams = new URLSearchParams({
-    count: "1",
+    count: "10",
     format: "json",
     language: "en",
     name: req.params.name,
@@ -17,12 +27,6 @@ locationRouter.get("/:name", async (req, res) => {
     .then((response) => response.json())
     .then((data) => data);
 
-  // Before accessing the database, I might need to check it's status, locationDbOptions could have
-  // a wrapper to check if options are actually available
-
-  // Save new locations to db, should probably check if they already exist, maybe have some semi-persistent storage
-  const { saveLocationsByName } = locationDbOptions();
-  // check where the coordinates actually are
   saveLocationsByName(req.params.name, locations);
 
   res.send(locations);
@@ -30,4 +34,4 @@ locationRouter.get("/:name", async (req, res) => {
 
 locationRouter.get("/favourites");
 
-locationRouter.post("/favourite");
+locationRouter.post("/favourite", (req, res) => {});
