@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useGetLocations } from "../api/useGetLocations";
+import { useFavourites } from "../api/useFavourites";
 
 export const Search = () => {
   const [name, setName] = useState("");
   const { getLocations, locations } = useGetLocations();
+  const { addFavourite } = useFavourites();
 
   const handleSearch = async () => {
     await getLocations(name);
@@ -39,15 +41,20 @@ export const Search = () => {
             </thead>
           )}
           {locations &&
-            locations.map((location) => (
-              <tbody key={location.id}>
+            locations.map(({ id, name, country, latitude, longitude }) => (
+              <tbody key={id}>
                 <tr>
-                  <th scope="row">{location.name}</th>
-                  <td>{location.country}</td>
-                  <td>{location.latitude}</td>
-                  <td>{location.longitude}</td>
+                  <th scope="row">{name}</th>
+                  <td>{country}</td>
+                  <td>{latitude}</td>
+                  <td>{longitude}</td>
                   <td>
-                    <button className="border-2 rounded-md p-2 m-2">
+                    <button
+                      className="border-2 rounded-md p-2 m-2"
+                      onClick={() =>
+                        addFavourite({ name, latitude, longitude })
+                      }
+                    >
                       add fav
                     </button>
                   </td>

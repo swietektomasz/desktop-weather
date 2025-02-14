@@ -7,8 +7,6 @@ locationRouter.get("/:name", async (req, res) => {
   const { saveLocationsByName, loadLocationsByName } = locationDbOptions();
   const savedLocations = await loadLocationsByName(req.params.name);
 
-  console.log(savedLocations);
-
   if (savedLocations.length > 0) {
     res.send(savedLocations);
     return;
@@ -32,6 +30,15 @@ locationRouter.get("/:name", async (req, res) => {
   res.send(locations);
 });
 
-locationRouter.get("/favourites");
+locationRouter.post("/favourite", async (req, res) => {
+  const { saveLocationFavourite, loadLocationFavourites } = locationDbOptions();
 
-locationRouter.post("/favourite", (req, res) => {});
+  saveLocationFavourite(req.body.city.name, [
+    req.body.city.latitude,
+    req.body.city.longitude,
+  ]);
+
+  const favourites = await loadLocationFavourites();
+
+  res.send(favourites);
+});

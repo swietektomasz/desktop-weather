@@ -18,17 +18,6 @@ const loadLocationsByName = async (name: string) => {
   return [];
 };
 
-const saveLocationFavourite = async (
-  name: string,
-  coordinates: [number, number]
-) => {
-  if (!name || !coordinates) return;
-
-  // this replaces existing favs, what I could do is get the existing ones
-  // and join them with the new ones
-  await locationDb.put("favourites", JSON.stringify({ name, coordinates }));
-};
-
 const loadLocationFavourites = async () => {
   const favourites = await locationDb.get("favourites");
 
@@ -37,6 +26,19 @@ const loadLocationFavourites = async () => {
   }
 
   return [];
+};
+
+const saveLocationFavourite = async (
+  name: string,
+  coordinates: [number, number]
+) => {
+  if (!name || !coordinates) return;
+
+  const existingFavourites = await loadLocationFavourites();
+
+  const favourites = [...existingFavourites, { name, coordinates }];
+
+  await locationDb.put("favourites", JSON.stringify(favourites));
 };
 
 const status = locationDb.status;

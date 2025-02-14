@@ -3,6 +3,7 @@ import cors from "cors";
 import { locationDbOptions } from "./db/location";
 import { locationRouter } from "./routes/location";
 import { ServerStatus } from "./enums";
+import { weatherRouter } from "./routes/weather";
 
 export const app = express();
 const port = 3000;
@@ -19,6 +20,7 @@ app.use(cors(corsOptions));
 // To note, it would be nice to cache these, though saving every string that returns something
 // might be overkill
 app.use("/location", locationRouter);
+app.use("/weather", weatherRouter);
 
 // get weather based on saved name, save weather into db
 
