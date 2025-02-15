@@ -1,6 +1,7 @@
 import { Search } from "./components/Search";
 import { ServerStatus } from "./components/ServerStatus";
 import "./App.css";
+import { Favourites } from "./components/Favourites";
 
 // to add favourites I could go with simple routing or alternatively
 // have the app in one of two modes, search mode, and weather mode,
@@ -9,8 +10,13 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <ServerStatus />
-      <Search />
+      <div className="flex justify-between">
+        <ServerStatus />
+        <Favourites />
+      </div>
+      <div>
+        <Search />
+      </div>
     </div>
   );
 }

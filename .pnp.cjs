@@ -38,6 +38,7 @@ const RAW_RUNTIME_STATE =
           ["@vitejs/plugin-react", "virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:4.3.4"],\
           ["cors", "npm:2.8.5"],\
           ["express", "npm:4.21.2"],\
+          ["iconoir-react", "virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:7.10.1"],\
           ["level", "npm:9.0.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:18.3.1"],\
@@ -1943,6 +1944,7 @@ const RAW_RUNTIME_STATE =
           ["@vitejs/plugin-react", "virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:4.3.4"],\
           ["cors", "npm:2.8.5"],\
           ["express", "npm:4.21.2"],\
+          ["iconoir-react", "virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:7.10.1"],\
           ["level", "npm:9.0.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:18.3.1"],\
@@ -2476,6 +2478,28 @@ const RAW_RUNTIME_STATE =
           ["https-proxy-agent", "npm:7.0.6"],\
           ["agent-base", "npm:7.1.3"],\
           ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["iconoir-react", [\
+      ["npm:7.10.1", {\
+        "packageLocation": "../.yarn/berry/cache/iconoir-react-npm-7.10.1-825b624d42-10c0.zip/node_modules/iconoir-react/",\
+        "packageDependencies": [\
+          ["iconoir-react", "npm:7.10.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:7.10.1", {\
+        "packageLocation": "./.yarn/__virtual__/iconoir-react-virtual-0adc831b00/2/.yarn/berry/cache/iconoir-react-npm-7.10.1-825b624d42-10c0.zip/node_modules/iconoir-react/",\
+        "packageDependencies": [\
+          ["iconoir-react", "virtual:c6ab39eb6df2d314233819d9ef5b4ff055d38a7040e5a8f89cacd668779eb7926aa48d6e2619d48b415d54174541fa0b768895cd9bdbb35471768a3a2763aa84#npm:7.10.1"],\
+          ["@types/react", "npm:18.3.18"],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\

@@ -13,6 +13,9 @@ export const useFavourites = () => {
     try {
       await fetch(`http://localhost:3000/location/favourite`, {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(city),
       })
         .then((res) => res.json())
@@ -24,9 +27,9 @@ export const useFavourites = () => {
 
   const getFavourites = async () => {
     try {
-      await fetch(`http://localhost:3000/location/favourite`)
+      await fetch(`http://localhost:3000/location/favourites`)
         .then((res) => res.json())
-        .then((fav) => setFavourites(fav.results));
+        .then((fav) => setFavourites(fav));
     } catch (error) {
       console.log(error);
     }

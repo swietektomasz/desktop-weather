@@ -13,6 +13,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.use(express.json());
 
 // should return a list of locations with their coordinates
 // i.e there can be multiple locations under one name, it should return them all and the user should

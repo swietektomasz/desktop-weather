@@ -1601,6 +1601,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^4.3.4"
     cors: "npm:^2.8.5"
     express: "npm:^4.21.2"
+    iconoir-react: "npm:^7.10.1"
     level: "npm:^9.0.0"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -2187,6 +2188,15 @@ __metadata:
     agent-base: "npm:^7.1.2"
     debug: "npm:4"
   checksum: 10c0/f729219bc735edb621fa30e6e84e60ee5d00802b8247aac0d7b79b0bd6d4b3294737a337b93b86a0bd9e68099d031858a39260c976dc14cdbba238ba1f8779ac
+  languageName: node
+  linkType: hard
+
+"iconoir-react@npm:^7.10.1":
+  version: 7.10.1
+  resolution: "iconoir-react@npm:7.10.1"
+  peerDependencies:
+    react: ^16.8.6 || ^17 || ^18
+  checksum: 10c0/ada8d5a1a94f5622bcb59d8a071c98437026de1cf3927beb9f714ac5dc17d9f8a202f23dc11936aa2f0549679d9e5e4f5ff65f4575f84df02580037a684df7bd
   languageName: node
   linkType: hard
 
