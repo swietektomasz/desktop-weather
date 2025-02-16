@@ -30,15 +30,23 @@ const loadLocationFavourites = async () => {
 
 const saveLocationFavourite = async (
   name: string,
-  coordinates: [number, number]
+  latitude: number,
+  longitude: number
 ) => {
-  if (!name || !coordinates) return;
+  if (!name || !latitude || !longitude) return;
 
   const existingFavourites = await loadLocationFavourites();
 
-  const favourites = [...existingFavourites, { name, coordinates }];
+  if (existingFavourites.length > 0) {
+    const favourites = [...existingFavourites, { name, latitude, longitude }];
 
-  await locationDb.put("favourites", JSON.stringify(favourites));
+    await locationDb.put("favourites", JSON.stringify(favourites));
+  }
+
+  await locationDb.put(
+    "favourites",
+    JSON.stringify([{ name, latitude, longitude }])
+  );
 };
 
 const status = locationDb.status;

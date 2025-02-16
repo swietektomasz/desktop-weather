@@ -8,6 +8,7 @@ export type Favourite = {
 
 export const useFavourites = () => {
   const [favourites, setFavourites] = useState<Favourite[]>([]);
+  const [selectedFavourite, selectFavourite] = useState<Favourite>();
 
   const addFavourite = async (city: Favourite) => {
     try {
@@ -35,5 +36,11 @@ export const useFavourites = () => {
     }
   };
 
-  return { favourites, addFavourite, getFavourites };
+  return {
+    favourites,
+    addFavourite,
+    getFavourites,
+    selectedFavourite,
+    selectFavourite,
+  };
 };
