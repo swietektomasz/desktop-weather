@@ -1,14 +1,26 @@
 import { useState } from "react";
 
+export type WeatherData = {
+  daily: {
+    precipitation_sum: number[];
+    rain_sum: number[];
+    sunrise: string[];
+    sunset: string[];
+    temperature_2m_max: number[];
+    temperature_2m_min: number[];
+    time: string[];
+    weather_code: number[];
+  };
+};
+
 export const useGetWeather = () => {
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState<WeatherData | undefined>();
 
   const getWeather = async (
     name: string,
     latitude: number,
     longitude: number
   ) => {
-    console.log(name, latitude, longitude);
     try {
       await fetch(
         `http://localhost:3000/weather/${name}/${latitude}/${longitude}`

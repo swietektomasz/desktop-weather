@@ -1,17 +1,9 @@
 import { Router } from "express";
-import { weatherDbOptions } from "../db/weather";
 
 export const weatherRouter = Router();
 
 weatherRouter.get("/:name/:latitude/:longitude", async (req, res) => {
-  const { loadWeatherByName } = weatherDbOptions();
-  const savedLocations = await loadWeatherByName(req.params.name);
-
-  if (savedLocations.length > 0) {
-    res.send(savedLocations);
-    return;
-  }
-
+  // would be smart to cache requests by date so I don't send as many requests
   const searchParams = new URLSearchParams({
     latitude: req.params.latitude,
     longitude: req.params.longitude,
@@ -28,6 +20,3 @@ weatherRouter.get("/:name/:latitude/:longitude", async (req, res) => {
 
   res.send(weather);
 });
-
-// save historical weather data by date - useful?
-weatherRouter.post("/");
