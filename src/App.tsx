@@ -10,8 +10,13 @@ export type Mode = "search" | "weather";
 
 function App() {
   const [mode, setMode] = useState<Mode>("search");
-  const { favourites, getFavourites, selectFavourite, selectedFavourite } =
-    useFavourites();
+  const {
+    favourites,
+    getFavourites,
+    selectFavourite,
+    selectedFavourite,
+    addFavourite,
+  } = useFavourites();
 
   useEffect(() => {
     getFavourites();
@@ -30,7 +35,7 @@ function App() {
       </div>
       <div>
         {mode === "search" ? (
-          <Search />
+          <Search addFavourite={addFavourite} />
         ) : (
           <Weather selectedFavourite={selectedFavourite} />
         )}

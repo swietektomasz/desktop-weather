@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useGetLocations } from "../api/useGetLocations";
-import { useFavourites } from "../api/useFavourites";
+import { Favourite } from "../api/useFavourites";
 
-export const Search = () => {
+export const Search = ({
+  addFavourite,
+}: {
+  addFavourite: (city: Favourite) => Promise<void>;
+}) => {
   const [name, setName] = useState("");
   const { getLocations, locations } = useGetLocations();
-  const { addFavourite } = useFavourites();
 
   const handleSearch = async () => {
     await getLocations(name);

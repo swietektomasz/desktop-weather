@@ -33,7 +33,11 @@ locationRouter.get("/:name", async (req, res) => {
 locationRouter.post("/favourite", async (req, res) => {
   const { saveLocationFavourite, loadLocationFavourites } = locationDbOptions();
 
-  saveLocationFavourite(req.body.name, req.body.latitude, req.body.longitude);
+  await saveLocationFavourite(
+    req.body.name,
+    req.body.latitude,
+    req.body.longitude
+  );
 
   const favourites = await loadLocationFavourites();
 

@@ -14,7 +14,6 @@ export type DailyWeatherData = {
 export const mapWeatherData = (
   weatherData: WeatherData | undefined
 ): DailyWeatherData[] => {
-  console.log(weatherData);
   if (!weatherData) return [];
 
   return weatherData.daily.time.map((date, index) => ({

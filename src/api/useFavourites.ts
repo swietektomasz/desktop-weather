@@ -20,11 +20,13 @@ export const useFavourites = () => {
         body: JSON.stringify(city),
       })
         .then((res) => res.json())
-        .then((fav) => setFavourites(fav.results));
+        .then((fav) => setFavourites(fav));
     } catch (error) {
       console.log(error);
     }
   };
+
+  // remove favourite
 
   const getFavourites = async () => {
     try {

@@ -41,6 +41,7 @@ const saveLocationFavourite = async (
     const favourites = [...existingFavourites, { name, latitude, longitude }];
 
     await locationDb.put("favourites", JSON.stringify(favourites));
+    return;
   }
 
   await locationDb.put(
