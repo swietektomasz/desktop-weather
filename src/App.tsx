@@ -23,9 +23,8 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {mode === "search"}
-      <div className="flex justify-between">
+    <div className="h-screen">
+      <div className="flex justify-between h-max">
         <ServerStatus />
         <Favourites
           setMode={setMode}
@@ -33,10 +32,9 @@ function App() {
           selectFavourite={selectFavourite}
         />
       </div>
-      <div>
-        {mode === "search" ? (
-          <Search addFavourite={addFavourite} />
-        ) : (
+      <div className="h-8/10">
+        {mode === "search" && <Search addFavourite={addFavourite} />}
+        {mode === "weather" && (
           <Weather selectedFavourite={selectedFavourite} />
         )}
       </div>

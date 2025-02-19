@@ -14,7 +14,14 @@
       {
         "title": "desktop-weather",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "maxWidth": 800,
+        "maxHeight": 600,
+        "resizable": false,
+        "maximizable": false,
+        "minimizable": false,
+        "alwaysOnTop": true,
+        "focus": true
       }
     ],
     "security": {

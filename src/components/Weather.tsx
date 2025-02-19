@@ -33,9 +33,9 @@ export const Weather = ({
   }, [selectedFavourite]);
 
   return (
-    <div>
+    <div className="flex flex-col h-full">
       {day && (
-        <ul>
+        <ul className="h-8/10">
           <li>Precipitation: {day.precipitation}mm</li>
           <li>Rain: {day.rain}mm</li>
           <li>Sunrise at: {new Date(day.sunrise).toLocaleTimeString()}</li>
