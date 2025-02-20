@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { WeatherCode } from "../helpers/weatherCodeImageFinder";
 
 export type WeatherData = {
   daily: {
@@ -9,7 +10,7 @@ export type WeatherData = {
     temperature_2m_max: number[];
     temperature_2m_min: number[];
     time: string[];
-    weather_code: number[];
+    weather_code: WeatherCode[];
   };
 };
 

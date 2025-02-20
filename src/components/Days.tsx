@@ -8,6 +8,16 @@ export const Days = ({
   days: DailyWeatherData[];
   selectDay: Dispatch<SetStateAction<DailyWeatherData | undefined>>;
 }) => {
+  const formatDate = (date: string) => {
+    const day = new Date(date);
+
+    return day.toLocaleDateString(undefined, {
+      weekday: "short",
+      day: "2-digit",
+      month: "short",
+    });
+  };
+
   return (
     <div className="flex justify-center">
       {days.map((day) => (
@@ -16,7 +26,7 @@ export const Days = ({
           onClick={() => selectDay(day)}
           className="border-2 rounded-md p-1 m-1"
         >
-          {day.time}
+          {formatDate(day.time)}
         </button>
       ))}
     </div>

@@ -3,6 +3,7 @@ import { useGetWeather } from "../api/useGetWeather";
 import { Favourite } from "../api/useFavourites";
 import { Days } from "./Days";
 import { DailyWeatherData, mapWeatherData } from "../helpers/mapWeatherData";
+import { weatherCodeImageFinder } from "../helpers/weatherCodeImageFinder";
 
 export const Weather = ({
   selectedFavourite,
@@ -42,7 +43,10 @@ export const Weather = ({
           <li>Sunset at: {new Date(day.sunset).toLocaleTimeString()}</li>
           <li>Max temperature: {day.temperatureMax}C</li>
           <li>Min temperature: {day.temperatureMin}C</li>
-          <li>Weather code: {day.weatherCode}</li>
+          <li>
+            Weather code:{" "}
+            <img src={`/${weatherCodeImageFinder(day.weatherCode)}.svg`} />
+          </li>
         </ul>
       )}
       <Days days={mapWeatherData(weather)} selectDay={selectDay} />

@@ -1,4 +1,5 @@
 import { WeatherData } from "../api/useGetWeather";
+import { WeatherCode } from "./weatherCodeImageFinder";
 
 export type DailyWeatherData = {
   time: string;
@@ -8,7 +9,7 @@ export type DailyWeatherData = {
   sunset: string;
   temperatureMax: number;
   temperatureMin: number;
-  weatherCode: number;
+  weatherCode: WeatherCode;
 };
 
 export const mapWeatherData = (
